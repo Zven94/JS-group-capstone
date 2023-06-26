@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/Zven94/JS-group-capstone/issues"
   },
-  "homepage": "https://Zven94.github.io/JS-group-capstone",
+  "homepage": "https://zven94.github.io/JS-group-capstone",
   "devDependencies": {
     "@babel/core": "^7.22.5",
     "@babel/plugin-transform-modules-commonjs": "^7.22.5",
