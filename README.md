@@ -144,14 +144,14 @@ Deployed by GitHub Pages.
 
 👤 **Nicolas Emiliano Bolañez**
 
-- GitHub: [@hajnaloltyan](https://github.com/Zven94)
-- LinkedIn: [Hajnal Oltyan](https://www.linkedin.com/in/nicolas-bola%C3%B1ez-520372222/)
+- GitHub: [@Zven94](https://github.com/hajnaloltyan)
+- LinkedIn: [Nicolas Emiliano Bolañez](https://www.linkedin.com/in/hajnaloltyan/)
 
 
 👤 **Hajnalka Oltyan**
 
-- GitHub: [@Zven94](https://github.com/hajnaloltyan)
-- LinkedIn: [Nicolas Emiliano Bolañez](https://www.linkedin.com/in/hajnaloltyan/)
+- GitHub: [@hajnaloltyan](https://github.com/Zven94)
+- LinkedIn: [Hajnal Oltyan](https://www.linkedin.com/in/nicolas-bola%C3%B1ez-520372222/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
