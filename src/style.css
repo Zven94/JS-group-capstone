@@ -1,4 +1,17 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('./Lato-Light.ttf') format('ttf');
+  font-weight: 900;
+  font-style: normal;
+}
+
 body {
+  color: #000;
+  font-family: 'MyFont', sans-serif;
+  font-size: 0.75rem;
+}
+
+.capstone-footer {
   color: red;
 }
 
