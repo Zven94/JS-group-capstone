@@ -12,6 +12,10 @@ body {
 }
 
 .capstone-footer {
+  color: red;
+}
+
+.capstone-header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
