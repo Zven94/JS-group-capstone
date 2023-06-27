@@ -1,18 +1,23 @@
-@font-face {
-  font-family: 'MyFont';
-  src: url('./Lato-Light.ttf') format('ttf');
-  font-weight: 900;
-  font-style: normal;
-}
-
 body {
   color: #000;
-  font-family: 'MyFont', sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 0.75rem;
 }
 
-.capstone-footer {
-  color: red;
+button {
+  width: 40%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: green;
+  border-color: green;
+  color: #fff;
 }
 
 .capstone-header {
@@ -21,4 +26,39 @@ body {
   justify-content: space-around;
   align-items: center;
   border: 2px solid #000;
+}
+
+.content {
+  margin: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.card-image {
+  object-fit: contain;
+  width: 60%;
+}
+
+.card-title {
+  font-size: 22px;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 80%;
+}
+
+.capstone-footer {
+  color: red;
 }
