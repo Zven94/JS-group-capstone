@@ -1,5 +1,6 @@
 body {
   color: #000;
+  font-size: 0.75rem;
 }
 
 .capstone-header {
@@ -7,6 +8,7 @@ body {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  border: 1px solid #000;
 }
 
 .capstone-footer {
