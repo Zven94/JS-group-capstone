@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'MyFont';
-  src: url('../assets/family-fonts/Roboto-Medium.ttf') format('ttf');
-  font-weight: 600;
+  src: url('Lato-Light.ttf') format('ttf');
+  font-weight: 900;
   font-style: normal;
 }
 
