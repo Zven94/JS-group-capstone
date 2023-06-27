@@ -11,13 +11,7 @@ body {
   font-size: 0.75rem;
 }
 
-.capstone-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;  
-  border: 2px solid #000;
-}
+
 
 .capstone-footer {
   display: flex;
