@@ -1,3 +1,17 @@
 body {
-  color: red;
+  color: #000;
+}
+
+.capstone-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.capstone-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
