@@ -4,9 +4,9 @@ const imageURL = 'https://www.artic.edu/iiif/2';
 
 let artWorks = [];
 
-const displayCards = () => {
-  const cardContainer = document.querySelector('.cards');
+const cardContainer = document.querySelector('.cardContainer');
 
+const displayCards = () => {
   cardContainer.innerHTML = '';
 
   if (artWorks !== []) {
