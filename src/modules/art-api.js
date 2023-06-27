@@ -15,3 +15,11 @@ const getArtWorks = async () => {
     };
   }
 };
+
+const fetchArtWorks = async () => {
+  const data = await getArtWorks();
+  const dataResult = await data.data;
+  return dataResult;
+};
+
+export default fetchArtWorks;
