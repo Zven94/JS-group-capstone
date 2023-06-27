@@ -4,6 +4,54 @@ body {
   font-size: 0.75rem;
 }
 
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid #000;
+}
+
+.capstone-header-ul-hide {
+  display: none;
+}
+
+li {
+  list-style: none;
+}
+
+.capstone-header-popUp-hide {
+  display: none;
+}
+
+.capstone-header-popUp-display {
+  display: block;
+  position: absolute;
+  width: 80vh;
+  height: auto;
+  top: 25px;
+  right: 10%;
+  background-color: #fff;
+  border: 1px solid green;
+  font-size: 0.6rem;
+}
+
+.capstone-popUp-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100rem;
+  backdrop-filter: blur(15px);
+}
+
+.div-popUp-title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 button {
   width: 40%;
   padding: 10px;
@@ -20,12 +68,11 @@ button:hover {
   color: #fff;
 }
 
-.capstone-header {
+.myArticle-style {
+  width: 80vh;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  border: 2px solid #000;
 }
 
 .content {

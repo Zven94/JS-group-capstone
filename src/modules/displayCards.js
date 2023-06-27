@@ -1,4 +1,5 @@
 import fetchArtWorks from './art-api.js';
+import displayPopUp from './displayPopUp.js';
 
 const imageURL = 'https://www.artic.edu/iiif/2';
 
@@ -10,7 +11,7 @@ const displayCards = () => {
   cardContainer.innerHTML = '';
 
   if (artWorks !== []) {
-    artWorks.forEach(({ id, title, image }) => {
+    artWorks.forEach(({ id, title, image }, index) => {
       const card = document.createElement('article');
       card.classList.add('card');
 
@@ -31,6 +32,12 @@ const displayCards = () => {
       `;
 
       cardContainer.appendChild(card);
+
+      // i get the ID of the comments buttons and add a event for them
+      const commentsBtn = document.querySelector(`[id="${id}"]`);
+      commentsBtn.addEventListener('click', () => {
+        displayPopUp(artWorks[index]);
+      });
     });
   } else {
     cardContainer.innerHTML = 'No cards to show! :(';
@@ -45,7 +52,7 @@ const loadArtWorks = async () => {
     artistInfo: art.artist_display,
     image: `${imageURL}/${art.image_id}/full/843,/0/default.jpg`,
   }));
-  console.log(artWorks);
+
   displayCards();
 };
 
