@@ -10,3 +10,11 @@ body {
   font-family: 'MyFont';
   font-size: 0.75rem;
 }
+
+.capstone-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid #000;
+}
