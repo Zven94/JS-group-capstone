@@ -1,5 +1,13 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('../assets/family-fonts/Roboto-Medium.ttf') format('ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
 body {
   color: #000;
+  font-family: 'MyFont';
   font-size: 0.75rem;
 }
 
@@ -7,8 +15,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
-  border: 1px solid #000;
+  align-items: center;  
+  border: 2px solid #000;
 }
 
 .capstone-footer {
@@ -16,4 +24,5 @@ body {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  border: 2px solid #000;
 }
