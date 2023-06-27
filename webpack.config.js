@@ -10,7 +10,7 @@ module.exports = {
     static: './dist',
   },
   plugins: [
-      new HtmlWebpackPlugin({
+    new HtmlWebpackPlugin({
       template: './src/index.html',
       // favicon: './src/images/hajnalkaoltyan.png',
       inject: 'body',
@@ -38,10 +38,10 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'fonts/'
-            }
-          }
-        ]
+              outputPath: 'fonts/',
+            },
+          },
+        ],
       },
     ],
   },
