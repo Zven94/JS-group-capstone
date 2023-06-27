@@ -12,7 +12,6 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      // favicon: './src/images/hajnalkaoltyan.png',
       inject: 'body',
     }),
   ],
