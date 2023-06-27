@@ -125,7 +125,27 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n//# sourceURL=webpack://js-group-capstone/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_displayCards_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/displayCards.js */ \"./src/modules/displayCards.js\");\n\n\n\nwindow.addEventListener('DOMContentLoaded', _modules_displayCards_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n\n//# sourceURL=webpack://js-group-capstone/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/art-api.js":
+/*!********************************!*\
+  !*** ./src/modules/art-api.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst baseURL = 'https://api.artic.edu/api/v1/artworks';\nconst pageNum = 'page=2';\nconst limit = 'limit=12';\nconst fullURL = `${baseURL}?${pageNum}&${limit}`;\n\nconst getArtWorks = async () => {\n  try {\n    const result = await fetch(fullURL, { method: 'GET' });\n    const data = await result.json();\n    return data;\n  } catch (error) {\n    return {\n      Response: 'False',\n      Error: error.message || 'Unexpected error',\n    };\n  }\n};\n\nconst fetchArtWorks = async () => {\n  const data = await getArtWorks();\n  const dataResult = await data.data;\n  return dataResult;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (fetchArtWorks);\n\n//# sourceURL=webpack://js-group-capstone/./src/modules/art-api.js?");
+
+/***/ }),
+
+/***/ "./src/modules/displayCards.js":
+/*!*************************************!*\
+  !*** ./src/modules/displayCards.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _art_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./art-api.js */ \"./src/modules/art-api.js\");\n\n\nconst imageURL = 'https://www.artic.edu/iiif/2';\n\nlet artWorks = [];\n\nconst displayCards = () => {\n  const cardContainer = document.querySelector('.cards');\n\n  cardContainer.innerHTML = '';\n\n  if (artWorks !== []) {\n    artWorks.forEach(({ id, title, image }) => {\n      const card = document.createElement('article');\n      card.classList.add('card');\n\n      card.innerHTML = `\n        <img src=\"${image}\" alt=\"${title}\" class=\"card-image\">\n\n        <h3 class=\"card-title\">\n          ${title}\n        </h3>\n\n        <button type=\"button\" class=\"commentsBtn\" id=\"${id}\">\n          Comments\n        </button>\n\n        <button type=\"button\" class=\"resBtn\" id=\"${id}\">\n          Reservations\n        </button>\n      `;\n\n      cardContainer.appendChild(card);\n    });\n  } else {\n    cardContainer.innerHTML = 'No cards to show! :(';\n  }\n};\n\nconst loadArtWorks = async () => {\n  const artWorksAllInfo = await (0,_art_api_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  artWorks = artWorksAllInfo.map((art) => ({\n    id: art.id,\n    title: art.title,\n    artistInfo: art.artist_display,\n    image: `${imageURL}/${art.image_id}/full/843,/0/default.jpg`,\n  }));\n  console.log(artWorks);\n  displayCards();\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadArtWorks);\n\n//# sourceURL=webpack://js-group-capstone/./src/modules/displayCards.js?");
 
 /***/ }),
 
