@@ -19,7 +19,6 @@ const getLikes = async () => {
 const fetchLikes = async () => {
   const data = await getLikes();
   const dataResult = await data;
-  console.log(dataResult);
   return dataResult;
 };
 
