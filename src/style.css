@@ -12,6 +12,21 @@ ul {
   border: 2px solid #000;
 }
 
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.2);
+}
+
 .capstone-header-ul-hide {
   display: none;
 }
@@ -49,6 +64,7 @@ li {
   border: none;
   border-radius: 3px;
   box-shadow: 0 0 3px;
+  color: #000;
 }
 
 .capstone-popUp-blur {
@@ -87,7 +103,7 @@ li {
   height: 20vh;
 }
 
-.commentsBtn {
+.commentsBtn,.resBtn {
   width: 40%;
   padding: 10px;
   text-align: center;
@@ -101,7 +117,9 @@ li {
   box-sizing: content-box;
 }
 
-button:hover {
+.commentsBtn:hover,
+.resBtn:hover,
+.div-popUp-close:hover {
   background-color: green;
   border-color: green;
   color: #fff;
@@ -117,7 +135,7 @@ button:hover {
 }
 
 .content {
-  margin: 10%;
+  margin: 5% 10%;
   display: flex;
   align-items: center;
 }
@@ -125,6 +143,7 @@ button:hover {
 .cardContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   grid-gap: 30px;
 }
 
@@ -137,7 +156,8 @@ button:hover {
 
 .card-image {
   object-fit: contain;
-  width: 17vh;
+  width: 50vh;
+  height: 40vh;
 }
 
 .card-title {
@@ -145,6 +165,19 @@ button:hover {
   flex-wrap: wrap;
   text-align: center;
   width: 80%;
+}
+
+.like-count {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.likesBtn {
+  border: 0;
+  background-color: #fff;
+  color: red;
 }
 
 .capstone-footer {
