@@ -69,17 +69,36 @@ li {
   padding: 5px;
 }
 
+.myArticle-div-Main{
+  display: flex;
+  flex-direction: row;
+}
+
+.myArticle-form-Div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 250px;
+}
+
+.form-comment {
+  height: 20vh;
+}
+
 .commentsBtn {
   width: 40%;
   padding: 10px;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 2vh;
   font-weight: 700;
   letter-spacing: 2px;
   border: none;
   box-shadow: 0 0 5px;
   border-radius: 10px;
   cursor: pointer;
+  box-sizing: content-box;
 }
 
 button:hover {
@@ -118,7 +137,7 @@ button:hover {
 
 .card-image {
   object-fit: contain;
-  width: 30vh;
+  width: 17vh;
 }
 
 .card-title {
@@ -130,4 +149,21 @@ button:hover {
 
 .capstone-footer {
   color: red;
+}
+
+.divComments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.4rem;
+}
+
+.ulComments {
+  width: 50vh;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+  font-size: 0.4rem;
 }
