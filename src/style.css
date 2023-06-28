@@ -12,6 +12,21 @@ ul {
   border: 2px solid #000;
 }
 
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.2);
+}
+
 .capstone-header-ul-hide {
   display: none;
 }
@@ -49,6 +64,7 @@ li {
   border: none;
   border-radius: 3px;
   box-shadow: 0 0 3px;
+  color: #000;
 }
 
 .capstone-popUp-blur {
@@ -80,10 +96,11 @@ li {
   border: none;
   box-shadow: 0 0 5px;
   border-radius: 10px;
-  cursor: pointer;
 }
 
-button:hover {
+.commentsBtn:hover,
+.resBtn:hover,
+.div-popUp-close:hover {
   background-color: green;
   border-color: green;
   color: #fff;
@@ -129,6 +146,19 @@ button:hover {
   flex-wrap: wrap;
   text-align: center;
   width: 80%;
+}
+
+.like-count {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.likesBtn {
+  border: 0;
+  background-color: #fff;
+  color: red;
 }
 
 .capstone-footer {
