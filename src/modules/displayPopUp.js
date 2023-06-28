@@ -29,7 +29,10 @@ const displayPopUp = (myElement) => {
     popUpDiv.classList.remove('capstone-header-popUp-display');
     parentPopUp.classList.remove('capstone-popUp-blur');
     parentPopUp.classList.add('capstone-popUp-noneBlur');
-    articleDisplay.innerHTML = '';
+
+    while (document.querySelector('.myArticle-style')) {
+      document.querySelector('.myArticle-style').remove();
+    }
   });
 };
 
