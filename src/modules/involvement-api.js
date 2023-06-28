@@ -24,3 +24,28 @@ const fetchLikes = async () => {
 };
 
 export const loadLikes = async () => fetchLikes();
+
+export const sendLike = async (id) => {
+  try {
+    const res = await fetch(likesURL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        item_id: `${id}`,
+      }),
+    });
+
+    if (!res.ok) {
+      const errorData = await res.json();
+      throw new Error(errorData.message);
+    }
+
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    return {
+      Response: 'False',
+      Error: error.message || 'Unexpected error',
+    };
+  }
+};
