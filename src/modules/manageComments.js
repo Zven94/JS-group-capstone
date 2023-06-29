@@ -1,5 +1,7 @@
 let commentsData = [];
 
+// get the appId and the item ID to get the Item 's comments using getScore();
+
 const loadFunction = async (appId, ID) => {
   await getScore(appId, ID);
 
@@ -8,12 +10,16 @@ const loadFunction = async (appId, ID) => {
   parentElement.appendChild(divComments);
   divComments.classList.add('divComments');
 
+  // Create the parrent elemente to appende the incoming comments
+
   divComments.innerHTML = `
       <h2 class="h2Comments">Comments (${commentsData.length})<h2>
       <ul class="ulComments">
       </ul>
     `;
   const ulComments = document.querySelector('.ulComments');
+
+  // forEach loop to creat all the elements for each comment
 
   commentsData.forEach((element) => {
     const liComment = document.createElement('li');
@@ -23,6 +29,7 @@ const loadFunction = async (appId, ID) => {
     <h3>${element.creation_date} ${element.username} ${element.comment}</h3>
     `;
   });
+//
 };
 
 // GET function for comments:

@@ -129,6 +129,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/modules/commentCounter.js":
+/*!***************************************!*\
+  !*** ./src/modules/commentCounter.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst commentCounter = () => {\r\n  const parentCounter = document.querySelector('.ulComments');\r\n  let counter = 0;\r\n  while (document.querySelector('.liComments')) {\r\n    counter += 1;\r\n  }\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (commentCounter);\n\n//# sourceURL=webpack://js-group-capstone/./src/modules/commentCounter.js?");
+
+/***/ }),
+
 /***/ "./src/modules/displayCards.js":
 /*!*************************************!*\
   !*** ./src/modules/displayCards.js ***!
