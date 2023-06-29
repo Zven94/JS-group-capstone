@@ -17,6 +17,11 @@ ul {
   align-items: center;
   border-radius: 3px;
   box-shadow: 0 0 5px;
+  font-size: 1rem;
+}
+
+.myLogo {
+  width: 40%;
 }
 
 h3,
