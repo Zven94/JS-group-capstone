@@ -1,3 +1,7 @@
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   color: #000;
@@ -227,8 +231,11 @@ li {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-
-  /* border: 2px solid #000; */
   border-radius: 3px;
   box-shadow: 0 0 5px;
+}
+
+.creator {
+  text-decoration: none;
+  color: #a9a0a0;
 }
