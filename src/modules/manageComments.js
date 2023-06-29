@@ -5,7 +5,7 @@ let commentsData = [];
 const loadFunction = async (appId, ID) => {
   await getScore(appId, ID);
 
-//  const parentElement = document.querySelector('.myArticle-style');
+  //  const parentElement = document.querySelector('.myArticle-style');
   const parentElement = document.querySelector('.myArticle-form-Div');
   const divComments = document.createElement('div');
   parentElement.appendChild(divComments);
