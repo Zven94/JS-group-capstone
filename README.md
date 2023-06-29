@@ -5,7 +5,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 JS Group Project ](#-js-group-project-)
+- [📖 JS/API-CAPSTONE Project ](#-jsapi-capstone-project-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -26,9 +26,10 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 JS Group Project <a name="about-project"></a>
+# 📖 JS/API-CAPSTONE Project <a name="about-project"></a>
 
-This is my Microverse **JS Group Project** site.
+This is our Microverse **JS/API-CAPSTONE Project** site, featuring an Art Gallery using HTML, CSS and Javascript.
+The site displays 12 art works from the **Art Institute of Chicago API**, and each of the items have the like button underneath with a like counter shown. Also with the Comments button, people can view the individual card on a pop-up with additional details, and read the previous comments from other users, or add their own new comment.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -52,6 +53,8 @@ This is my Microverse **JS Group Project** site.
 
 - **Webpack**
 - **Git WorkFlow**
+- **Jest**
+- **Using APIs**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -159,6 +162,13 @@ Deployed by GitHub Pages.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
+**Completing all _Student C's_ tasks:
+ * Display Reservations pop up with selected item's details
+ * Display reservations for a given item on the Reservations pop-up
+ * Create feature: add new reservation
+ * Add reservations counter
+ * Add tests for reservations counter
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
@@ -181,7 +191,7 @@ If you like this project please leave a star and a comment.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse to have this opportunity, and also thank you the code review team. 
+We would like to thank Microverse to have this opportunity, and also thank you the code review team. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
