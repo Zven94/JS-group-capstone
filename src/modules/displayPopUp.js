@@ -1,4 +1,3 @@
-import commentCounter from './commentCounter.js';
 import { loadFunction, addNewComment } from './manageComments.js';
 
 const appId = 'K1MYTt3Lfcx3nGJb1us2';
@@ -57,8 +56,6 @@ const displayPopUp = (myElement) => {
     document.querySelector('.form-user').value = '';
     document.querySelector('.form-comment').value = '';
   });
-  console.log('imin')
-  commentCounter();
 
   // function to close the article
   const closeBtn = document.querySelector('.div-popUp-close');
