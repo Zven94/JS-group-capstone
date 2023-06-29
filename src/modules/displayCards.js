@@ -1,5 +1,6 @@
 import fetchArtWorks from './art-api.js';
 import displayPopUp from './displayPopUp.js';
+import homepageCounter from './homepageCounter.js';
 import { sendLike, loadLikes } from './involvement-api.js';
 
 const imageURL = 'https://www.artic.edu/iiif/2';
@@ -70,9 +71,6 @@ const attachLikeListeners = () => {
 
       const newLike = updatedLikes.find((like) => like.item_id === itemID)?.likes || 0;
       likeCount.textContent = `${newLike} likes`;
-
-      console.log('liked it');
-      // window.location.reload();
     });
   });
 };
@@ -101,6 +99,7 @@ const loadArtWorks = async () => {
 
   displayCards(artWorks);
   attachLikeListeners();
+  homepageCounter();
 };
 
 export default loadArtWorks;
