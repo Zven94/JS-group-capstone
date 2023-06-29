@@ -51,7 +51,7 @@ const addNewComment = async (appId, ID) => {
   const commentInput = document.querySelector('.form-comment');
 
   if (userInput.value && commentInput.value) {
-    fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/comments`, {
+    await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/comments`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

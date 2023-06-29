@@ -85,7 +85,7 @@ li {
   padding: 5px;
 }
 
-.myArticle-div-Main{
+.myArticle-div-Main {
   display: flex;
   flex-direction: row;
 }
@@ -93,17 +93,18 @@ li {
 .myArticle-form-Div {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: end;
   box-sizing: border-box;
   padding: 10px;
-  height: 250px;
+  height: 78vh;
 }
 
 .form-comment {
   height: 20vh;
 }
 
-.commentsBtn,.resBtn {
+.commentsBtn,
+.resBtn {
   width: 40%;
   padding: 10px;
   text-align: center;
@@ -198,5 +199,5 @@ li {
   flex-direction: column;
   align-items: start;
   text-align: start;
-  font-size: 0.4rem;
+  font-size: 0.55rem;
 }

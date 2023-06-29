@@ -36,21 +36,25 @@ const displayPopUp = (myElement) => {
   articleFormDiv.innerHTML = `
     <input placeholder="add your name" class='form-user'>
     <textarea placeholder="add your comment here..." class='form-comment' type="text" ></textarea>
-    <button class="submitComment">Submit</button>
+    <button class="submitComment" type="submit">Submit</button>
    `;
 
   loadFunction(appId, myElement.id);
 
   const submitInput = document.querySelector('.submitComment');
 
-  submitInput.addEventListener('click', (event) => {
+  submitInput.addEventListener('click', async (event) => {
     event.preventDefault();
-    addNewComment(appId, myElement.id);
+    await addNewComment(appId, myElement.id);
     loadFunction(appId, myElement.id);
     while (document.querySelector('.ulComments')) {
       document.querySelector('.ulComments').remove();
       document.querySelector('.h2Comments').remove();
+      document.querySelector('.divComments').remove();
     }
+
+    document.querySelector('.form-user').value = '';
+    document.querySelector('.form-comment').value = '';
   });
 
   // function to close the article
