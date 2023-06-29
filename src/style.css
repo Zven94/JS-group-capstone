@@ -85,17 +85,37 @@ li {
   padding: 5px;
 }
 
+.myArticle-div-Main {
+  display: flex;
+  flex-direction: row;
+}
+
+.myArticle-form-Div {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 78vh;
+}
+
+.form-comment {
+  height: 20vh;
+}
+
 .commentsBtn,
 .resBtn {
   width: 40%;
   padding: 10px;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 2vh;
   font-weight: 700;
   letter-spacing: 2px;
   border: none;
   box-shadow: 0 0 5px;
   border-radius: 10px;
+  cursor: pointer;
+  box-sizing: content-box;
 }
 
 .commentsBtn:hover,
@@ -163,4 +183,21 @@ li {
 
 .capstone-footer {
   color: red;
+}
+
+.divComments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.4rem;
+}
+
+.ulComments {
+  width: 50vh;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+  font-size: 0.55rem;
 }
