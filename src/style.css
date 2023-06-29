@@ -54,6 +54,17 @@ li {
   box-sizing: border-box;
 }
 
+.capstone-header-links {
+  text-decoration-color: transparent;
+  color: #000;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 3px;
+}
+
+.capstone-header-links:hover {
+  text-decoration-color: black;
+}
+
 .div-popUp-close {
   margin: 0;
   padding: 0;
