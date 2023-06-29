@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import commentCounter from './commentCounter';
+import commentCounter from './commentCounter.js';
 
 describe('commentCounter', () => {
   test('Count how many "li" elements have been created in a specific "lu" with the class="ulComments" ', () => {
