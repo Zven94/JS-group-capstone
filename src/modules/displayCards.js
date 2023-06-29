@@ -52,6 +52,9 @@ const displayCards = (artWorks) => {
       const commentsBtn = document.querySelector(`[id="${id}"]`);
       commentsBtn.addEventListener('click', () => {
         displayPopUp(artWorks[index]);
+
+        // add counter
+        //  commentCounter();
       });
     });
   } else {
@@ -71,6 +74,15 @@ const attachLikeListeners = () => {
 
       const newLike = updatedLikes.find((like) => like.item_id === itemID)?.likes || 0;
       likeCount.textContent = `${newLike} likes`;
+    });
+  });
+};
+
+const filterBadImages = () => {
+  const allCardImages = document.querySelectorAll('.card-image');
+  allCardImages.forEach((pic) => {
+    pic.addEventListener('error', () => {
+      pic.src = `${imageURL}/${defaultImageID}/full/843,/0/default.jpg`;
     });
   });
 };
@@ -98,6 +110,7 @@ const loadArtWorks = async () => {
   }));
 
   displayCards(artWorks);
+  filterBadImages();
   attachLikeListeners();
   homepageCounter();
 };

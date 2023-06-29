@@ -5,7 +5,8 @@ let commentsData = [];
 const loadFunction = async (appId, ID) => {
   await getScore(appId, ID);
 
-  const parentElement = document.querySelector('.myArticle-style');
+  //  const parentElement = document.querySelector('.myArticle-style');
+  const parentElement = document.querySelector('.myArticle-form-Div');
   const divComments = document.createElement('div');
   parentElement.appendChild(divComments);
   divComments.classList.add('divComments');
@@ -13,7 +14,7 @@ const loadFunction = async (appId, ID) => {
   // Create the parrent elemente to appende the incoming comments
 
   divComments.innerHTML = `
-      <h2 class="h2Comments">Comments (${commentsData.length})<h2>
+      <h2 class="h2Comments">Comments (${commentsData.length})</h2>
       <ul class="ulComments">
       </ul>
     `;
@@ -44,9 +45,14 @@ const getScore = async (appId, ID) => {
     .then((response) => response.json())
     .then((data) => {
       commentsData = [];
-      data.forEach((element) => {
-        commentsData.push(element);
-      });
+      // console.log(data)
+      try {
+        data.forEach((element) => {
+          commentsData.push(element);
+        });
+      } catch (error) {
+        return error.message;
+      }
       return commentsData;
     });
 };
