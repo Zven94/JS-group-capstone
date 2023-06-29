@@ -1,3 +1,4 @@
+import commentCounter from './commentCounter.js';
 import { loadFunction, addNewComment } from './manageComments.js';
 
 const appId = 'K1MYTt3Lfcx3nGJb1us2';
@@ -47,6 +48,9 @@ const displayPopUp = (myElement) => {
     event.preventDefault();
     await addNewComment(appId, myElement.id);
     loadFunction(appId, myElement.id);
+
+    commentCounter();
+
     while (document.querySelector('.ulComments')) {
       document.querySelector('.ulComments').remove();
       document.querySelector('.h2Comments').remove();

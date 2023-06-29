@@ -52,6 +52,9 @@ const displayCards = (artWorks) => {
       const commentsBtn = document.querySelector(`[id="${id}"]`);
       commentsBtn.addEventListener('click', () => {
         displayPopUp(artWorks[index]);
+
+        // add counter
+        //  commentCounter();
       });
     });
   } else {
