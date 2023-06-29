@@ -78,6 +78,15 @@ const attachLikeListeners = () => {
   });
 };
 
+const filterBadImages = () => {
+  const allCardImages = document.querySelectorAll('.card-image');
+  allCardImages.forEach((pic) => {
+    pic.addEventListener('error', () => {
+      pic.src = `${imageURL}/${defaultImageID}/full/843,/0/default.jpg`;
+    });
+  });
+};
+
 const loadArtWorks = async () => {
   const artWorksAllInfo = await fetchArtWorks();
   const allLikes = await loadLikes();
@@ -101,6 +110,7 @@ const loadArtWorks = async () => {
   }));
 
   displayCards(artWorks);
+  filterBadImages();
   attachLikeListeners();
   homepageCounter();
 };
