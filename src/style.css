@@ -1,15 +1,18 @@
 body {
+  margin: 0;
   color: #000;
   font-family: Roboto, sans-serif;
   font-size: 0.75rem;
 }
 
 ul {
+  margin: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  border: 2px solid #000;
+  border-radius: 3px;
+  box-shadow: 0 0 5px;
 }
 
 h3,
@@ -43,7 +46,7 @@ li {
   display: block;
   position: absolute;
   width: 80vh;
-  height: auto;
+  height: 60vh;
   top: 25px;
   right: 33vw;
   background-color: #fff;
@@ -52,6 +55,7 @@ li {
   box-shadow: 0 0 7px;
   font-size: 0.6rem;
   box-sizing: border-box;
+  z-index: 10;
 }
 
 .capstone-header-links {
@@ -104,10 +108,10 @@ li {
 .myArticle-form-Div {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: space-around;
   box-sizing: border-box;
-  padding: 10px;
-  height: 78vh;
+  padding: 25px;
+  height: 40vh;
 }
 
 .form-comment {
@@ -203,12 +207,31 @@ li {
   font-size: 0.4rem;
 }
 
+.submitComment {
+  width: 60px;
+  background-color: #fff;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 0 3px;
+}
+
 .ulComments {
-  width: 50vh;
+  width: 90%;
   padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: start;
   text-align: start;
   font-size: 0.55rem;
+}
+
+.capstone-footer {
+  color: #a9a0a0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 2px solid #000; */
+  border-radius: 3px;
+  box-shadow: 0 0 5px;
 }
