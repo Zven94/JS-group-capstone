@@ -10,6 +10,8 @@ const displayPopUp = (myElement) => {
   popUpDiv.classList.add('capstone-header-popUp-display');
   popUpDiv.classList.remove('capstone-header-popUp-hide');
 
+  // creating elements for the popup forms
+
   const articleDisplay = document.createElement('article');
   const articleMainDiv = document.createElement('div');
   const articleFormDiv = document.createElement('form');
@@ -44,12 +46,16 @@ const displayPopUp = (myElement) => {
 
   const submitInput = document.querySelector('.submitComment');
 
+  // submit button
+
   submitInput.addEventListener('click', async (event) => {
     event.preventDefault();
     await addNewComment(appId, myElement.id);
     loadFunction(appId, myElement.id);
 
     commentCounter();
+
+    // delete the elements to avoid an overflow of the elements
 
     while (document.querySelector('.ulComments')) {
       document.querySelector('.ulComments').remove();

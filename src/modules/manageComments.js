@@ -1,11 +1,10 @@
 let commentsData = [];
 
-// get the appId and the item ID to get the Item 's comments using getScore();
+// get the appId and the item ID to get the Item 's comments using getComment();
 
 const loadFunction = async (appId, ID) => {
-  await getScore(appId, ID);
+  await getComment(appId, ID);
 
-  //  const parentElement = document.querySelector('.myArticle-style');
   const parentElement = document.querySelector('.myArticle-form-Div');
   const divComments = document.createElement('div');
   parentElement.appendChild(divComments);
@@ -35,7 +34,7 @@ const loadFunction = async (appId, ID) => {
 
 // GET function for comments:
 
-const getScore = async (appId, ID) => {
+const getComment = async (appId, ID) => {
   await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/comments?item_id=${ID}`, {
     method: 'GET',
     headers: {
